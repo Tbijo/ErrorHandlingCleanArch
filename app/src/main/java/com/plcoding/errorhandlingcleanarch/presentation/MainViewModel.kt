@@ -15,9 +15,11 @@ class MainViewModel(
     private val submitEmail: SubmitEmail = SubmitEmail()
 ): ViewModel() {
 
+    // "" is a typical value of a textField when it is empty
     var email by mutableStateOf("")
         private set
 
+    // error does not exit so it should be null
     var message by mutableStateOf<UiText?>(null)
 
     fun onEmailChange(email: String) {

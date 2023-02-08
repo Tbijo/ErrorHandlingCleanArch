@@ -40,6 +40,9 @@ class MainActivity : ComponentActivity() {
                         Text(text = "Submit")
                     }
                     Spacer(modifier = Modifier.height(8.dp))
+
+                    // If we have an Error then will we show the error message Text
+                    // asString() extracts the string
                     viewModel.message?.let {
                         Text(text = it.asString())
                     }
